@@ -34,6 +34,14 @@
     border-bottom-left-radius: 1em;
     vertical-align: middle;
 }
+
+/*por si el navegador no soporta video*/
+#videoNoSoportado img {
+    width: 100%;   
+    border-top-left-radius: 1em;
+    border-bottom-left-radius: 1em;
+    vertical-align: middle;
+}
 .detalleOfertaIdx {
     margin-left: 1em;
     margin-right: 1em;
