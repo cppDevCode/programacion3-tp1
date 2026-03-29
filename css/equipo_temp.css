@@ -1,0 +1,48 @@
+
+/* equipo */
+.equipo {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Cards */
+.miembro_equipo {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 250px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* Imágenes equipo */
+.miembro_equipo img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+/* Botón Conocer más */
+summary {
+    margin-top: 10px;
+    background-color: #26a3ac;
+    color: white;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 5px;
+    list-style: none;
+    text-align: center;
+}
+
+
+/* Texto desplegable */
+details p {
+    margin-top: 10px;
+    text-align: center;
+}
