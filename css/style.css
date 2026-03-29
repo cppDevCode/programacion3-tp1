@@ -1,0 +1,25 @@
+:root {
+    --color-primary: #141420;
+    --color-secondary: #1E1E30;
+    --color-accent: #C850FA;
+    --color-text: #F0F0FF;
+    --font-titulo: 'Rajdhani', sans-serif;
+    --font-cuerpo: 'Inter', sans-serif;
+    --space-xs: 4px;
+    --space-s: 8px;
+    --space-m: 16px;
+    --space-l: 24px;
+    --space-xl: 32px;
+    --space-xxl: 48px;
+}
+
+body {
+    font-family: var(--font-cuerpo);
+    background-color: var(--color-primary);
+    color: var(--color-text);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-titulo);
+}
+
