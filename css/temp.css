@@ -2,6 +2,7 @@
     background-color: darkslategrey;
 }
 
+/* Inicio de Seccion de Ofertas */
 .bannerIdx {
     display: flex;
     flex-direction: column;
@@ -47,7 +48,7 @@
     margin-right: 1em;
 }
 .detalleOfertaIdx p{
-    font-size: small;
+    font-size: large;
     text-align: justify;    
 }
 
@@ -60,10 +61,11 @@
     font-weight: bold;
 }
 
-.detalleOfertaIdx {
-    font-display: grid;
-    display: grid;
-    grid-template-rows: 6.2fr 1fr;
+.detalleOfertaIdx {        
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    gap: 15px;
 }
 .contenedorBotonPrecio {
     grid-template-columns: 20fr 10fr;
@@ -115,10 +117,12 @@
     background-color: white;
 }
 
+/* Fin Inicio de Seccion de Ofertas */
+/* Inicio Top 7 mas vendidos */
 #masVendidosIdx {        
     display: flex;
     padding: 10px;
-    flex-wrap: wrap; /* Esto permite que las cajas pasen abajo en caso de desborde de pantalla*/
+    flex-wrap: wrap; 
     gap: 1.5em;
     margin: 0% auto;
     background-color: dimgray;    
@@ -172,6 +176,7 @@
 #misionActividad details{
     padding-inline: 5%;    
 }
+/* Inicio Top 7 mas vendidos */
 
 /* DISEÑO RESPONSIVO (Móviles y Tablets)*/
 @media (max-width: 768px) {
@@ -181,23 +186,54 @@
     }
 
     .recuadroIdx {
-        grid-template-columns: 1fr; /* Una sola columna que ocupa todo */
-        width: 95%; /* Que ocupe casi toda la pantalla */
+        grid-template-columns: 1fr; 
+        width: 95%;
+        
     }
 
     .videoOfertaIdx video {
-        border-bottom-left-radius: 0;      /* Le quitamos el redondeo de abajo */
-        border-top-right-radius: 1em;      /* Le agregamos redondeo arriba a la derecha */
+        border-bottom-left-radius: 0;   
+        border-top-right-radius: 1em;   
     }
 
     .contenedorBotonPrecio {
         grid-template-columns: 1fr;
-        justify-items: center; /* Centramos el contenido */
-        gap: 15px; /* Espacio entre el precio y el botón */
+        justify-items: center; 
+        gap: 15px;
     }
     
     .detalleOfertaIdx {
         padding: 15px;
         margin: 0;
+    }
+    
+    .JuegoMasVendidoIdx {
+        display: flex;
+        flex-direction: row;
+        align-items: center;     
+        width: 100%;         
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .caratulaIdx {
+        width: 12em;
+    }
+
+    .caratulaIdx img {        
+        border-radius: 0;
+        width: 8em;
+    }
+
+    .topDescripcionIdx {
+        width: 20em;
+        text-align: left;
+    }
+
+    .estrellasIdx {
+        margin-top: 1px; 
+        margin-right: 1px; 
+        margin-bottom: auto;
+        text-align: left; 
     }
 }
