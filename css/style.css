@@ -1,7 +1,30 @@
-.cuerpoIdx {    
-    background-color: darkslategrey;
+:root {
+    --color-primary: #141420;
+    --color-secondary: #1E1E30;
+    --color-terciary: #59597d;
+    --color-accent: #C850FA;
+    --color-text: #F0F0FF;
+    --font-titulo: 'Rajdhani', sans-serif;
+    --font-cuerpo: 'Inter', sans-serif;
+    --space-xs: 4px;
+    --space-s: 8px;
+    --space-m: 16px;
+    --space-l: 24px;
+    --space-xl: 32px;
+    --space-xxl: 48px;
 }
 
+body {
+    font-family: var(--font-cuerpo);
+    background-color: var(--color-primary);
+    color: var(--color-text);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-titulo);
+}
+
+/*******INDEX********************/
 /* Inicio de Seccion de Ofertas */
 .bannerIdx {
     display: flex;
@@ -22,7 +45,7 @@
     grid-template-rows: min-content;
     display: inline-grid;
     width: 80%;
-    background-color: darkgrey;
+    background-color: var(--color-terciary);
     border-radius: 1em;
     align-content: center;
     
@@ -118,24 +141,24 @@
 }
 
 /* Fin Inicio de Seccion de Ofertas */
-/* Inicio Top 7 mas vendidos */
+/* Inicio Top 5 mas vendidos */
 #masVendidosIdx {        
     display: flex;
     padding: 10px;
     flex-wrap: wrap; 
     gap: 1.5em;
     margin: 0% auto;
-    background-color: dimgray;    
-    box-shadow: inset 1px 1px 2em 1em black;   
+    background-color: var(--color-terciary);    
+    box-shadow: inset 1px 1px 2em 1em var(--color-secondary);   
     border-radius: 10px;
-    width: 90%; 
+    width: 58%; 
     justify-content: center;       
 }
 
 .JuegoMasVendidoIdx {
     width: 12em;
     height: 18em;
-    background-color: burlywood;
+    background-color: var(--color-secondary);
     border-radius: 10px;    
     text-align: justify;
     box-shadow: 1px 1px 2px 1px black;
@@ -146,9 +169,9 @@
 
 .JuegoMasVendidoIdx:hover {
     cursor: pointer;
-    background-color: black;
+    background-color: var(--color-terciary);
     color: white;
-    box-shadow: 1px 1px 2px 1px white;
+    box-shadow: 1px 1px 2px 1px var(--color-secondary);
 }
 
 .caratulaIdx img{
@@ -209,25 +232,28 @@
     
     .JuegoMasVendidoIdx {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;     
         width: 100%;         
         height: auto;
-        padding: 20px 0;
+        padding: 5px 0;
     }
 
     .caratulaIdx {
         width: 12em;
+        margin-top: 1px; 
+        margin-right: 1px; 
+        margin-bottom: 0;
     }
 
-    .caratulaIdx img {        
-        border-radius: 0;
-        width: 8em;
+    .caratulaIdx img {                
+        border-radius: 10px;
+        width: 100%;
     }
 
     .topDescripcionIdx {
         width: 20em;
-        text-align: left;
+        text-align: center;
     }
 
     .estrellasIdx {
