@@ -1,7 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title> Pedidos </title>
+    <!--Esto lo copié del wpp del grupo que subió Julian-->
+    <!-- label { aplica los cambios a las <labels>
+  display: inline-block; significa que el bloque tiene el mismo ancho q la linea
+  width: 150px;
+}
+
+input, select {
+  margin-bottom: 10px;
+} esto me alinea los campos del formulario, es del CSS-->
+    <title> Pedidos </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 </head>
 
 <form style="text-align: center;">
@@ -27,13 +39,13 @@
   </select>
   <br>
   <label for = "numero_tarjeta"> Número de tarjeta </label>
-  <input type = "number" id="numero_tarjeta" name = "numero_tarjeta">
+  <input type = "number" id="numero_tarjeta" name = "numero_tarjeta" min = "0" max = "9999 9999 9999 9999">
   <br>
   <label for = "vencimiento"> Vencimiento </label>
   <input type = "month" id = "vencimiento" name ="vencimiento"> <!--el tipo "date" hace mm/dd/yyyy-->
   <br>
   <label for = "cvv"> Código de seguridad </label>
-  <input type ="number" id ="cvv" name="cvv">
+  <input type ="number" id ="cvv" name="cvv" min = "0" max = "999">
   <br>
   <button type="submit">Pedir</button>
 </form>
