@@ -14,38 +14,36 @@ input, select {
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-</head>
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
 
-<form style="text-align: center;">
-<h1> Haz tu pedido </h1> 
+<body>
+<div class = "titulo_pedidos"> 
+  <h1> Haz tu pedido </h1> 
   <p> Completando el siguiente formulario </p>
-</form>
+</div>
 
-<form style="text-align: center;">
-<form action="https://httpbin.org/post" method="POST" target ="_blank"> <!-- verificar el link!-->
+<form action="https://httpbin.org/post" method="POST" target ="_blank"
+class = "form_pedidos"> <!-- verificar el link!-->
   <label for="nombre">Nombre:</label>
   <input type="text" id="nombre" name="nombre" required>
-  <br>
   <label for="apellido"> Apellido: </label>
   <input type = "text" id="apellido" name ="apellido" required>
-  <br>
-   <label for="email">Email:</label>
+  <label for="email">Email:</label>
   <input type="email" id="email" name="email" required>
-  <br>
   <label for = "opciones_de_pago"> Opciones de pago </label>
   <select id = "opciones_de_pago" name = "opciones_de_pago">
     <option value="debito"> Débito </option>
     <option value="credito"> Crédito </option>
   </select>
-  <br>
   <label for = "numero_tarjeta"> Número de tarjeta </label>
   <input type = "number" id="numero_tarjeta" name = "numero_tarjeta" min = "0" max = "9999 9999 9999 9999">
-  <br>
   <label for = "vencimiento"> Vencimiento </label>
   <input type = "month" id = "vencimiento" name ="vencimiento"> <!--el tipo "date" hace mm/dd/yyyy-->
-  <br>
   <label for = "cvv"> Código de seguridad </label>
   <input type ="number" id ="cvv" name="cvv" min = "0" max = "999">
   <br>
   <button type="submit">Pedir</button>
 </form>
+</body>
+</html>
