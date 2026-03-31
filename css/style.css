@@ -3,6 +3,7 @@
     --color-secondary: #1E1E30;
     --color-accent: #C850FA;
     --color-text: #F0F0FF;
+    --color-button: #4c2cad;
     --font-titulo: 'Rajdhani', sans-serif;
     --font-cuerpo: 'Inter', sans-serif;
     --space-xs: 4px;
@@ -19,13 +20,20 @@ body {
     color: var(--color-text);
 }
 
-h1, h2, h3, h4, h5, h6 {
+/* h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-titulo);
+} */
+
+p {
+    font-family: var(--font-cuerpo);
 }
 
+form {font-family: var(--font-cuerpo);}
+
 .titulo_pedidos {
-    text-align: center;
-    margin-bottom: var(--space-l);
+ text-align: center;
+ margin-top: var(--space-l);
+ font-family: var(--font-titulo);
 } 
 
 
@@ -36,4 +44,19 @@ h1, h2, h3, h4, h5, h6 {
 .form_pedidos label {
     display: block;
     margin-bottom: var(--space-xs);
+}
+
+.button_pedidos {
+     color: var(--color-text);
+    padding: var(--space-xs)var(--space-s);
+    cursor: pointer;
+    margin-top: var(--space-xs);
+    background-color: var(--color-button);
+    display: inline-block;  
+    border: 2px solid black;
+    border-radius: 4px;
+    border-color: black;
+    font-size: 14px;
+    font-family: var(--font-cuerpo);
+    margin-top: var(--space-s);
 }

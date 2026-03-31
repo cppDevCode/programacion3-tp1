@@ -24,6 +24,24 @@ input, select {
 </div>
 
 <form action="https://httpbin.org/post" method="POST" target ="_blank"
+class = "form_pedidos"> 
+<label for = "producto"> Seleccione producto</label>
+<select id = "producto" name = "producto">
+  <option value="JuegoA"> Joystick </option>
+  <option value="JuegoB"> CPU </option>
+  <option value="JuegoC"> Monitor XXL </option>
+  <option value="JuegoD"> PS 4 </option>
+  <option value="JuegoE"> PS 5 </option>
+  <option value="JuegoF"> XBOX </option>
+</select>
+<br>
+ <button type="submit" class="button_pedidos">Agregar al carrito</button>
+<br>
+<br>
+</form>
+
+
+<form action="https://httpbin.org/post" method="POST" target ="_blank"
 class = "form_pedidos"> <!-- verificar el link!-->
   <label for="nombre">Nombre:</label>
   <input type="text" id="nombre" name="nombre" required>
@@ -68,7 +86,8 @@ class = "form_pedidos">
   <label for = "cvv"> Código de seguridad </label>
   <input type ="number" id ="cvv" name="cvv" min = "0" max = "999">
   <br>
-  <button type="submit">Pedir</button>
+  <br>
+  <button type="submit" class="button_pedidos">Pedir</button>
 </form>
 </body>
 </html>
