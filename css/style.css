@@ -1,10 +1,11 @@
 :root {
     --color-primary: #141420;
-    --color-secondary: #1e1e30;
-    --color-accent: #c850fa;
-    --color-text: #f0f0ff;
-    --font-titulo: "Rajdhani", sans-serif;
-    --font-cuerpo: "Inter", sans-serif;
+    --color-secondary: #1E1E30;
+    --color-quaternary:  #555151;
+    --color-accent: #C850FA;
+    --color-text: #F0F0FF;
+    --font-titulo: 'Rajdhani', sans-serif;
+    --font-cuerpo: 'Inter', sans-serif;
     --space-xs: 4px;
     --space-s: 8px;
     --space-m: 16px;
@@ -17,79 +18,51 @@ body {
     font-family: var(--font-cuerpo);
     background-color: var(--color-primary);
     color: var(--color-text);
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-titulo);
 }
 
-header {
+/* css equipo */
+/* equipo */
+.equipo {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--color-secondary);
-    position: sticky;
-    top: 0;
-}
-
-.logo {
-    width: 250px;
-}
-
-header nav a {
-    color: var(--color-text);
-    text-decoration: none;
-    padding: var(--space-s);
-}
-
-header nav a:hover {
-    color: var(--color-accent);
-}
-
-footer {
-    text-align: center;
+    justify-content: center;
+    gap: var(--space-l);
     padding: var(--space-m);
-    background-color: var(--color-secondary);
 }
 
-.faq_titulo {
-    text-align: center;
-    font-size: 40px;
-}
-
-.faq_titulo span {
-    color: var(--color-accent);
-}
-
-.faq_subtitulo {
-    text-align: center;
-    margin-bottom: var(--space-l);
-}
-
-.faq_container {
+/* Cards */
+.miembro_equipo {
+    background-color: var(--color-quaternary);
+    border: none;
+    border-radius: 10px;
+    width: 250px;
+    padding: var(--space-m);
+    box-shadow: 0 4px 8px #000000;
     text-align: center;
 }
 
-.faq_container details {
+/* Imágenes equipo */
+.miembro_equipo img {
+    width: 250px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+/* Botón Conocer más */
+summary {
+    margin-top: 10px;
     background-color: var(--color-accent);
-    margin: var(--space-m) auto;
-    padding: var(--space-l);
-    width: 60%;
-    border-radius: 8px;
-    text-align: left;
+    color: var(--color-text);
+    padding: var(--space-s);
+    cursor: pointer;
+    border-radius: 5px;
+    list-style: none;
+    text-align: center;
 }
 
-.faq_container details summary {
-    cursor: pointer;
-}
+/* fin css equipo */
