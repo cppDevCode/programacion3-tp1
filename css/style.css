@@ -29,7 +29,6 @@ h1, h2, h3, h4, h5, h6 {
 .equipo {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
     gap: var(--space-l);
     padding: var(--space-m);
 }
@@ -37,7 +36,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Cards */
 .miembro_equipo {
     background-color: var(--color-quaternary);
-    border: 1px solid var(--color-quaternary);
+    border: none;
     border-radius: 10px;
     width: 250px;
     padding: var(--space-m);
