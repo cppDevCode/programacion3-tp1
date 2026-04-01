@@ -65,3 +65,33 @@ font-family: var(--font-titulo);
     font-family: var(--font-cuerpo);
     margin-top: var(--space-s);
 }
+
+header nav a {
+    color: var(--color-text);
+    text-decoration: none;
+    padding: var(--space-s);
+    justify-content: center;
+}
+
+header nav a:hover {
+    color: var(--color-accent);
+}
+
+footer {
+    text-align: center;
+    padding: var(--space-m);
+    background-color: var(--color-secondary);
+}
+
+.logo {
+    width: 250px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-secondary);
+    position: sticky;
+    top: 0;
+}
