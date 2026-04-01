@@ -12,8 +12,13 @@
     --space-xl: 32px;
     --space-xxl: 48px;
 }
-
+main {
+    flex: 1;
+}
 body {
+    min-height: 100vh;
+    display: flex ;
+    flex-direction: column;
     font-family: var(--font-cuerpo);
     background-color: var(--color-primary);
     color: var(--color-text);
@@ -22,4 +27,72 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-titulo);
 }
+.titulo {
+    color: var(--color-accent);
+    margin-top: var(--space-l);
+    margin-left: var(--space-l);
+}
+.formulario {
+    background-color: var(--color-secondary);
+    padding: var(--space-l);
+    border-radius: 8px;
+    max-width: 400px;
+    margin-top: var(--space-l);
+    margin-left: var(--space-l);
+}
+.formulario label {
+    display: block;
+    margin-bottom: var(--space-m);
+}
 
+.formulario input[type="text"],
+.formulario input[type="email"],
+.formulario textarea {
+    width: 100%;
+    padding: var(--space-s) var(--space-m);
+    box-sizing: border-box;
+    background-color: var(--color-text);
+    color:#141420;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.formulario input[type="submit"],
+.formulario input[type="reset"] {
+    background-color: var(--color-accent);
+    color: var(--color-text);
+    border-radius: 4px;
+}
+.acciones {
+    display: flex;
+    gap: var(--space-m);
+    margin-top: var(--space-m);
+    
+}
+.accion {
+    display: flex;
+    align-items: center;
+    gap: var(--space-s);
+    margin-bottom: var(--space-s);
+}
+.navegador {
+    display: flex;
+    justify-content:flex-end;
+    gap: var(--space-m);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.navegador a {
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.pie {
+    text-align: center;
+    padding: var(--space-m);
+    background-color: var(--color-secondary);
+    margin-top: var(--space-l);
+}
+* {
+    box-sizing: border-box;
+}
