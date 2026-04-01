@@ -1,12 +1,13 @@
+/* Inicio CSS Global */
 :root {
     --color-primary: #141420;
-    --color-secondary: #1E1E30;
+    --color-secondary: #1e1e30;
+    --color-accent: #c850fa;
     --color-terciary: #59597d;
-    --color-quaternary:  #555151;
-    --color-accent: #C850FA;
-    --color-text: #F0F0FF;
-    --font-titulo: 'Rajdhani', sans-serif;
-    --font-cuerpo: 'Inter', sans-serif;
+    --color-quaternary: #555151;
+    --color-text: #f0f0ff;
+    --font-titulo: "Rajdhani", sans-serif;
+    --font-cuerpo: "Inter", sans-serif;
     --space-xs: 4px;
     --space-s: 8px;
     --space-m: 16px;
@@ -19,26 +20,103 @@ body {
     font-family: var(--font-cuerpo);
     background-color: var(--color-primary);
     color: var(--color-text);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: var(--font-titulo);
 }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-secondary);
+    position: sticky;
+    top: 0;
+}
+
+header nav a {
+    color: var(--color-text);
+    text-decoration: none;
+    padding: var(--space-s);
+}
+
+header nav a:hover {
+    color: var(--color-accent);
+}
+
+footer {
+    text-align: center;
+    padding: var(--space-m);
+    background-color: var(--color-secondary);
+}
+
+/* Fin CSS Global */
+
+/* Seccion FAQ */
+.logo {
+    width: 250px;
+}
+
+.faq_titulo {
+    text-align: center;
+    font-size: 40px;
+}
+
+.faq_titulo span {
+    color: var(--color-accent);
+}
+
+.faq_subtitulo {
+    text-align: center;
+    margin-bottom: var(--space-l);
+}
+
+.faq_container {
+    text-align: center;
+}
+
+.faq_container details {
+    background-color: var(--color-accent);
+    margin: var(--space-m) auto;
+    padding: var(--space-l);
+    width: 60%;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.faq_container details summary {
+    text-align: left;
+    cursor: pointer;
+}
+
+/* Fin Seccion FAQ */
 
 /*******INDEX********************/
 /* Inicio de Seccion de Ofertas */
 .bannerIdx {
     display: flex;
     flex-direction: column;
-    align-items: center;     
-    width: 100%;         
+    align-items: center;
+    width: 100%;
     padding: var(--space-l) 0; /* 24PX */
 }
 
 .tituloIdx {
     margin-left: 6em;
-    align-self: flex-start;    
-    color: var(--color-text)
+    align-self: flex-start;
+    color: var(--color-text);
 }
 
 .recuadroIdx {
@@ -49,12 +127,11 @@ h1, h2, h3, h4, h5, h6 {
     background-color: var(--color-terciary);
     border-radius: 1em;
     align-content: center;
-    
 }
 
 .videoOfertaIdx video {
     width: 100%;
-    
+
     border-top-left-radius: 1em;
     border-bottom-left-radius: 1em;
     vertical-align: middle;
@@ -62,7 +139,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /*por si el navegador no soporta video*/
 #videoNoSoportado img {
-    width: 100%;   
+    width: 100%;
     border-top-left-radius: 1em;
     border-bottom-left-radius: 1em;
     vertical-align: middle;
@@ -71,12 +148,12 @@ h1, h2, h3, h4, h5, h6 {
     margin-left: 1em;
     margin-right: 1em;
 }
-.detalleOfertaIdx p{
+.detalleOfertaIdx p {
     font-size: large;
-    text-align: justify;    
+    text-align: justify;
 }
 
-.detalleOfertaIdx h3{
+.detalleOfertaIdx h3 {
     font-size: medium;
     align-items: center;
 }
@@ -85,16 +162,16 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
 }
 
-.detalleOfertaIdx {        
+.detalleOfertaIdx {
     display: flex;
     flex-direction: column;
-    justify-content: space-between; 
+    justify-content: space-between;
     gap: var(--space-m); /* 16PX */
 }
 .contenedorBotonPrecio {
     grid-template-columns: 20fr 10fr;
     grid-template-rows: min-content;
-    display: inline-grid;    
+    display: inline-grid;
     margin-bottom: var(--space-m); /* 16PX */
     background-color: #00000040;
     padding: var(--space-s) var(--space-s); /* 8PX */
@@ -104,7 +181,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .contenedorPrecios {
     display: flex;
-    align-items: center;    
+    align-items: center;
     background-color: #00000040;
     padding: var(--space-xs) var(--space-s); /* 4PX Y 8PX */
     border-radius: var(--space-xs); /* 4PX */
@@ -114,7 +191,7 @@ h1, h2, h3, h4, h5, h6 {
 .precioOriginal {
     margin-left: 1em;
     text-decoration: line-through;
-    color:black;
+    color: black;
     font-size: 0.85em;
     margin-right: var(--space-s); /* 8PX */
 }
@@ -128,42 +205,42 @@ h1, h2, h3, h4, h5, h6 {
 #botonCompraOferta {
     border-style: hidden;
     font-weight: bold;
-    cursor: pointer;    
+    cursor: pointer;
     width: 150px;
-    height:40px;    
+    height: 40px;
     background-color: cornflowerblue;
     border-color: black;
     border-radius: var(--space-s); /* 4PX */
 }
 
 #botonCompraOferta:hover {
-    color:cornflowerblue;
+    color: cornflowerblue;
     background-color: white;
 }
 
 /* Fin Inicio de Seccion de Ofertas */
 /* Inicio Top 5 mas vendidos */
-#masVendidosIdx {        
+#masVendidosIdx {
     display: flex;
     padding: var(--space-s); /* 8PX */
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
     gap: 1.5em;
     margin: 0% auto;
-    background-color: var(--color-terciary);    
-    box-shadow: inset 1px 1px 2em 1em var(--color-secondary);   
+    background-color: var(--color-terciary);
+    box-shadow: inset 1px 1px 2em 1em var(--color-secondary);
     border-radius: var(--space-s); /* 8PX */
-    width: 58%; 
-    justify-content: center;       
+    width: 58%;
+    justify-content: center;
 }
 
 .JuegoMasVendidoIdx {
     width: 12em;
     height: 18em;
     background-color: var(--color-secondary);
-    border-radius: var(--space-s);    /* 8PX */
+    border-radius: var(--space-s); /* 8PX */
     text-align: justify;
     box-shadow: 1px 1px 2px 1px black;
-    display: flex;    
+    display: flex;
     flex-direction: column;
     overflow: hidden;
 }
@@ -175,7 +252,7 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 1px 1px 2px 1px var(--color-secondary);
 }
 
-.caratulaIdx img{
+.caratulaIdx img {
     width: 12em;
     border-top-left-radius: var(--space-s); /* 8px */
     border-top-right-radius: var(--space-s); /* 8px */
@@ -187,67 +264,65 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .estrellasIdx {
-    margin-top: auto; 
-    margin-left: var(--space-xs); /* 4px */ 
-    margin-bottom: var(--space-xs); /* 4px */ 
-    text-align: left; 
+    margin-top: auto;
+    margin-left: var(--space-xs); /* 4px */
+    margin-bottom: var(--space-xs); /* 4px */
+    text-align: left;
 }
 
-#misionActividad p{
+#misionActividad p {
     padding-inline: 5%;
 }
 
-#misionActividad details{
-    padding-inline: 5%;    
+#misionActividad details {
+    padding-inline: 5%;
 }
 /* Inicio Top 7 mas vendidos */
 
 /* DISEÑO RESPONSIVO (Móviles y Tablets)*/
 @media (max-width: 768px) {
-    
     .tituloIdx {
-        margin-left: 5%; 
+        margin-left: 5%;
     }
 
     .recuadroIdx {
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr;
         width: 95%;
-        
     }
 
     .videoOfertaIdx video {
-        border-bottom-left-radius: 0;   
-        border-top-right-radius: 1em;   
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 1em;
     }
 
     .contenedorBotonPrecio {
         grid-template-columns: 1fr;
-        justify-items: center; 
+        justify-items: center;
         gap: var(--space-m); /* 16px */
     }
-    
+
     .detalleOfertaIdx {
         padding: var(--space-m); /* 16 px */
         margin: 0;
     }
-    
+
     .JuegoMasVendidoIdx {
         display: flex;
         flex-direction: column;
-        align-items: center;     
-        width: 100%;         
+        align-items: center;
+        width: 100%;
         height: auto;
         padding: var(--space-xs) 0; /* 4px */
     }
 
     .caratulaIdx {
         width: 12em;
-        margin-top: 1px; 
-        margin-right: 1px; 
+        margin-top: 1px;
+        margin-right: 1px;
         margin-bottom: 0;
     }
 
-    .caratulaIdx img {                
+    .caratulaIdx img {
         border-radius: var(--space-s); /* 8 px */
         width: 100%;
     }
@@ -258,10 +333,10 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .estrellasIdx {
-        margin-top: 1px; 
-        margin-right: 1px; 
+        margin-top: 1px;
+        margin-right: 1px;
         margin-bottom: auto;
-        text-align: left; 
+        text-align: left;
     }
 }
 
@@ -293,7 +368,6 @@ h1, h2, h3, h4, h5, h6 {
     object-fit: cover;
     border-radius: 10px;
 }
-
 
 /* Botón Conocer más */
 summary {
