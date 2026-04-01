@@ -29,6 +29,7 @@ input, select {
       <a href="../pages/faq.html">Preguntas Frecuentes</a>
     </nav>
 </header>
+<main>
 <div class = "titulo_pedidos"> 
   <h1> Haz tu pedido </h1> 
   <p> Completando el siguiente formulario </p>
@@ -46,7 +47,7 @@ class = "form_pedidos">
   <option value="JuegoF"> XBOX </option>
 </select>
 <br>
- <button type="submit" class="button_pedidos">Agregar al carrito</button>
+<button type="submit" class="button_pedidos">Agregar al carrito</button>
 <br>
 <br>
 </form>
@@ -91,7 +92,8 @@ class = "form_pedidos">
     <option value="credito"> Crédito </option>
   </select>
   <label for = "numero_tarjeta"> Número de tarjeta </label>
-  <input type = "number" id="numero_tarjeta" name = "numero_tarjeta" min = "0" max = "9999 9999 9999 9999">
+  <input type = "text"  id="numero_tarjeta" name = "numero_tarjeta" maxlength="19" 
+  placeholder="0000-0000-0000-0000" required>
   <label for = "vencimiento"> Vencimiento </label>
   <input type = "month" id = "vencimiento" name ="vencimiento"> <!--el tipo "date" hace mm/dd/yyyy-->
   <label for = "cvv"> Código de seguridad </label>
@@ -100,6 +102,7 @@ class = "form_pedidos">
   <button type="submit" class="button_pedidos">Pedir</button>
 </form>
 <br>
+</main>
 <footer>
   <p>&copy; 2026 TecnoGames. Todos los derechos reservados.</p>
 </footer>

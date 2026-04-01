@@ -35,6 +35,8 @@ p {
 
 form {font-family: var(--font-cuerpo);}
 
+/* Inicio seccion Pedidos*/
+
 .titulo_pedidos {
 text-align: center;
 margin-top: var(--space-l);
@@ -95,3 +97,5 @@ header {
     position: sticky;
     top: 0;
 }
+
+/* Fin sección pedidos */
