@@ -12,10 +12,11 @@
     --space-xl: 32px;
     --space-xxl: 48px;
 }
-main {
-    flex: 1;
+* {
+    box-sizing: border-box;
 }
 body {
+    margin:0;
     min-height: 100vh;
     display: flex ;
     flex-direction: column;
@@ -23,10 +24,42 @@ body {
     background-color: var(--color-primary);
     color: var(--color-text);
 }
-
+/* Tipografía */
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-titulo);
 }
+header {
+    background-color: var(--color-secondary);
+    padding: var(--space-m);
+    display: flex ;
+    justify-content: space-between ;
+    align-items: center;
+}
+.logo{
+    height: 40px;
+}
+/* Navegación */
+.navegador {
+    display: flex;
+    justify-content:flex-end;
+    gap: var(--space-m);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color:#F0F0FF;
+}
+.navegador a {
+    color: var(--color-text);
+    text-decoration: none;
+}
+/* Main */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*Título y formulario */
 .titulo {
     color: var(--color-accent);
     margin-top: var(--space-l);
@@ -37,6 +70,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: var(--space-l);
     border-radius: 8px;
     max-width: 400px;
+    width: 100%;
     margin-top: var(--space-l);
     margin-left: var(--space-l);
 }
@@ -44,7 +78,7 @@ h1, h2, h3, h4, h5, h6 {
     display: block;
     margin-bottom: var(--space-m);
 }
-
+/* Inputs y textarea */
 .formulario input[type="text"],
 .formulario input[type="email"],
 .formulario textarea {
@@ -53,15 +87,21 @@ h1, h2, h3, h4, h5, h6 {
     box-sizing: border-box;
     background-color: var(--color-text);
     color:#141420;
-    cursor: pointer;
+    cursor: text;
     border-radius: 4px;
+    border:none;
 }
+/* Botones */
 .formulario input[type="submit"],
 .formulario input[type="reset"] {
     background-color: var(--color-accent);
     color: var(--color-text);
     border-radius: 4px;
+    border: none;
+    padding: var(--space-s) var(--space-m);
+    cursor: pointer;
 }
+/* Acciones */
 .acciones {
     display: flex;
     gap: var(--space-m);
@@ -74,25 +114,11 @@ h1, h2, h3, h4, h5, h6 {
     gap: var(--space-s);
     margin-bottom: var(--space-s);
 }
-.navegador {
-    display: flex;
-    justify-content:flex-end;
-    gap: var(--space-m);
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-.navegador a {
-    color: var(--color-text);
-    text-decoration: none;
-}
 
-.pie {
+/* Footer */
+footer {
     text-align: center;
     padding: var(--space-m);
     background-color: var(--color-secondary);
-    margin-top: var(--space-l);
-}
-* {
-    box-sizing: border-box;
+    margin-top: var(--space-m);
 }
