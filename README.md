@@ -4,10 +4,12 @@ Bienvenido al repositorio del **Trabajo Práctico N°1** para la asignatura de P
 
 ## 👥 Integrantes - Grupo 6
 * **Alejandro Lucas Baldres**
-* **Julian Riedinger**
-* **Julieta Dabús**
-* **Clara Zivano**
 * **Marianela Belardinelli**
+* **Julieta Dabús**
+* **Matías F. Ledesma González**
+* **Julian Riedinger**
+* **Clara Zivano**
+
 
 ---
 
