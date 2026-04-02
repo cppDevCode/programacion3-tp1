@@ -1,18 +1,21 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../css/style.css">
-</head>
-<body>
-      <header>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Contacto</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&family=Inter:wght@400;500&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="../css/style.css" />
+    </head>
+    <body>
+        <header>
             <img src="../assets/img/logo.png" alt="Logo TecnoGames" class="logo" />
-            <nav class="navegador">
+            <nav>
                 <a href="../index.html">Home</a>
                 <a href="../pages/servicios.html">Servicios</a>
                 <a href="../pages/equipo.html">Equipo</a>
@@ -22,37 +25,37 @@
             </nav>
         </header>
 
-    <main>
-        <h1 class="titulo">Formulario de Contacto</h1>
-        <form action="#" method="post" class="formulario">
-        <!--Nombre, apellido, correo electrónico y mensaje son campos obligatorios.-->
-            <label for="nombre">Ingrese su nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
+        <main class="main-contacto">
+            <h1 class="titulo">Formulario de Contacto</h1>
+            <form action="#" method="post" class="formulario">
+                <!--Nombre, apellido, correo electrónico y mensaje son campos obligatorios.-->
+                <label for="nombre">Ingrese su nombre:</label>
+                <input type="text" id="nombre" name="nombre" required />
 
-            <label for="apellido">Ingrese su apellido:</label>
-            <input type="text" id="apellido" name="apellido" required>
+                <label for="apellido">Ingrese su apellido:</label>
+                <input type="text" id="apellido" name="apellido" required />
 
-            <label for="email">Ingrese su correo electrónico:</label>
-            <input type="email" id="email" name="email" required>
+                <label for="email">Ingrese su correo electrónico:</label>
+                <input type="email" id="email" name="email" required />
 
-            <label for="mensaje">Mensaje:</label>
-            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
 
-            <div class="acciones">
-                <div class="accion">
-                    <span>Enviar:</span>
-                    <input type="submit" value="Enviar">
+                <div class="acciones">
+                    <div class="accion">
+                        <span>Enviar:</span>
+                        <input type="submit" value="Enviar" />
+                    </div>
+
+                    <div class="accion">
+                        <span>Resetear:</span>
+                        <input type="reset" value="Resetear" />
+                    </div>
                 </div>
-
-                 <div class="accion">
-                    <span>Resetear:</span>
-                    <input type="reset" value="Resetear">
-                </div>
-            </div>
-        </form>
-    </main> 
-    <footer>
+            </form>
+        </main>
+        <footer>
             <p>&copy; 2026 TecnoGames. Todos los derechos reservados.</p>
-    </footer>
-</body>
+        </footer>
+    </body>
 </html>
