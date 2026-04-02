@@ -1,13 +1,15 @@
 # Trabajo Práctico N°1: TechNova Solutions 🚀
 
-Bienvenido al repositorio del **Trabajo Práctico N°1** para la asignatura de Programación 3. En este proyecto, el **Grupo 6** ha desarrollado una propuesta digital integral para **TechNova Solutions**, enfocándose en las mejores prácticas de estructura semántica y diseño responsivo.
+Bienvenido al repositorio del **Trabajo Práctico N°1** para la asignatura de Programación 3. En este proyecto, el **Grupo 6** ha desarrollado una propuesta digital integral para **TechNova Solutions**, enfocándose en las mejores prácticas de estructura semántica.
 
 ## 👥 Integrantes - Grupo 6
 * **Alejandro Lucas Baldres**
-* **Julian Riedinger**
-* **Julieta Dabús**
-* **Clara Zivano**
 * **Marianela Belardinelli**
+* **Julieta Dabús**
+* **Matías F. Ledesma González**
+* **Julian Riedinger**
+* **Clara Zivano**
+
 
 ---
 
@@ -23,6 +25,10 @@ TechNova Solutions busca expandir su portafolio digital a través de una platafo
 2.  **Navegación:** Crear un sistema de enlaces fluido entre todas las secciones del sitio.
 3.  **Estilado:** Aplicar CSS inicial para definir la identidad visual de la marca.
 4.  **Colaboración:** Mantener un historial de commits organizado y gestión de ramas efectiva.
+
+## 🎯 Objetivos del Sitio TecnoGames
+* Desarrollar y comercializar productos y servicios tecnológicos enfocados en videojuegos, brindando experiencias innovadoras y de alta calidad que satisfagan las necesidades de los usuarios.
+* Ofrecer soluciones tecnológicas y de entretenimiento digital, especialmente en el ámbito de los videojuegos, proporcionando productos confiables, accesibles y actualizados, con un fuerte compromiso con la satisfacción del cliente.
 
 ---
 
