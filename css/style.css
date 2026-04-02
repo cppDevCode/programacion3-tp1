@@ -167,6 +167,11 @@ h1, h2, h3, h4, h5, h6 {
     overflow: hidden;
 }
 
+.JuegoMasVendidoIdx a{
+        text-decoration: none;
+        color: inherit;       
+    }
+
 .JuegoMasVendidoIdx:hover {
     cursor: pointer;
     background-color: var(--color-terciary);
@@ -234,11 +239,11 @@ h1, h2, h3, h4, h5, h6 {
         display: flex;
         flex-direction: column;
         align-items: center;     
-        width: 100%;         
+        width: 100%;                 
         height: auto;
         padding: var(--space-xs) 0; /* 4px */
     }
-
+    
     .caratulaIdx {
         width: 12em;
         margin-top: 1px; 
