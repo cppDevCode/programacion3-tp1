@@ -360,6 +360,11 @@ footer {
     overflow: hidden;
 }
 
+.JuegoMasVendidoIdx a{
+        text-decoration: none;
+        color: inherit;       
+    }
+
 .JuegoMasVendidoIdx:hover {
     cursor: pointer;
     background-color: var(--color-terciary);
@@ -429,7 +434,7 @@ footer {
         height: auto;
         padding: var(--space-xs) 0; /* 4px */
     }
-
+    
     .caratulaIdx {
         width: 12em;
         margin-top: 1px;
