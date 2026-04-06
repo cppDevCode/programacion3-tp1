@@ -1,6 +1,8 @@
 # Trabajo Práctico N°1: TechNova Solutions 🚀
 
 Bienvenido al repositorio del **Trabajo Práctico N°1** para la asignatura de Programación 3. En este proyecto, el **Grupo 6** ha desarrollado una propuesta digital integral para **TechNova Solutions**, enfocándose en las mejores prácticas de estructura semántica.
+## URI
+https://cppdevcode.github.io/programacion3-tp1/
 
 ## 👥 Integrantes - Grupo 6
 * **Alejandro Lucas Baldres**
@@ -12,6 +14,8 @@ Bienvenido al repositorio del **Trabajo Práctico N°1** para la asignatura de P
 
 
 ---
+## Organización
+Cada integrante se encargo de realizar una seccion del sitio web con su respectivo HTML y CSS, salvo las variables globales del CSS y el Header y Footer que fueron realizados por un integrante para homogenizar la pagina. Se trato de abordar la optimizacion de la pagina cargando las imagenes o videos de acuerdo a soporte del navegador. 
 
 ## 📋 Descripción del Proyecto
 TechNova Solutions busca expandir su portafolio digital a través de una plataforma moderna y funcional. Nuestro equipo ha diseñado un sitio web multi-página que cumple con los estándares actuales de desarrollo **Frontend**, aplicando conceptos de:
