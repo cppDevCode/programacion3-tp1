@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--Esto lo copié del wpp del grupo que subió Julian-->
+    <!-- label { aplica los cambios a las <labels>
+  display: inline-block; significa que el bloque tiene el mismo ancho q la linea
+  width: 150px;
+}
+
+input, select {
+  margin-bottom: 10px;
+} esto me alinea los campos del formulario, es del CSS-->
+    <title> Pedidos </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+
+<body>
+<header>
+  <img src="../assets/img/logo.png" alt="Logo TecnoGames" class="logo" />
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../pages/servicios.html">Servicios</a>
+      <a href="../pages/equipo.html">Equipo</a>
+      <a href="../pages/pedido.html">Realizar pedido</a>
+      <a href="../pages/contacto.html">Contacto</a>
+      <a href="../pages/faq.html">Preguntas Frecuentes</a>
+    </nav>
+</header>
+<main>
+<div class = "titulo_pedidos"> 
+  <h1> Haz tu pedido </h1> 
+  <p> Completando el siguiente formulario </p>
+</div>
+
+<form action="https://httpbin.org/post" method="POST" target ="_blank"
+class = "form_pedidos"> 
+<label for = "producto"> Seleccione producto</label>
+<select id = "producto" name = "producto">
+  <option value="JuegoA"> Joystick </option>
+  <option value="JuegoB"> CPU </option>
+  <option value="JuegoC"> Monitor XXL </option>
+  <option value="JuegoD"> PS 4 </option>
+  <option value="JuegoE"> PS 5 </option>
+  <option value="JuegoF"> XBOX </option>
+</select>
+<br>
+<button type="submit" class="button_pedidos">Agregar al carrito</button>
+<br>
+<br>
+</form>
+
+
+<form action="https://httpbin.org/post" method="POST" target ="_blank"
+class = "form_pedidos"> <!-- verificar el link!-->
+  <label for="nombre">Nombre:</label>
+  <input type="text" id="nombre" name="nombre" required>
+  <label for="apellido"> Apellido: </label>
+  <input type = "text" id="apellido" name ="apellido" required>
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required>
+  <br> 
+</form>
+
+<div class="titulo_pedidos">
+<h2> Detalles de envío </h2>
+</div>
+
+<form action="https://httpbin.org/post" method="POST" target ="_blank"
+class = "form_pedidos">
+<label for="calle"> Calle: </label>
+<input type = "text" id="calle" name="calle" required>
+<label for="numero"> Número: </label>
+<input type = "number" id="numero" name="numero" min = "0" required>
+<label for="ciudad"> Ciudad: </label>
+<input type = "text" id="ciudad" name="ciudad" required>
+<label for="CP"> Código postal: </label>
+<input type = "text" id="CP" name="CP" required>
+</form>
+
+<div class = "titulo_pedidos">
+<h2> Detalles de pago </h2>
+</div>
+
+<form action="https://httpbin.org/post" method="POST" target ="_blank"
+class = "form_pedidos">
+  <label for = "opciones_de_pago"> Opciones de pago </label>
+  <select id = "opciones_de_pago" name = "opciones_de_pago">
+    <option value="debito"> Débito </option>
+    <option value="credito"> Crédito </option>
+  </select>
+  <label for = "numero_tarjeta"> Número de tarjeta </label>
+  <input type = "text"  id="numero_tarjeta" name = "numero_tarjeta" maxlength="19" 
+  placeholder="0000-0000-0000-0000" required>
+  <label for = "vencimiento"> Vencimiento </label>
+  <input type = "month" id = "vencimiento" name ="vencimiento"> <!--el tipo "date" hace mm/dd/yyyy-->
+  <label for = "cvv"> Código de seguridad </label>
+  <input type ="number" id ="cvv" name="cvv" min = "0" max = "999">
+  <br>
+  <button type="submit" class="button_pedidos">Pedir</button>
+</form>
+<br>
+</main>
+<footer>
+  <p>&copy; 2026 TecnoGames. Todos los derechos reservados.</p>
+</footer>
+</body>
+</html>
