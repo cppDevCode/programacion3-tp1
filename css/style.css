@@ -360,6 +360,11 @@ footer {
     overflow: hidden;
 }
 
+.JuegoMasVendidoS {
+    width: 12em;
+    height: 22em;
+}
+
 .JuegoMasVendidoIdx a{
         text-decoration: none;
         color: inherit;       
@@ -377,6 +382,7 @@ footer {
     border-top-left-radius: var(--space-s); /* 8px */
     border-top-right-radius: var(--space-s); /* 8px */
 }
+
 
 .topDescripcionIdx {
     font-size: x-small;
@@ -398,6 +404,15 @@ footer {
     padding-inline: 5%;
 }
 /* Inicio Top 7 mas vendidos */
+
+/* Servicios CSS */
+.servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);    
+    gap: var(--space-m);
+    padding: auto;
+    margin: var(--space-m);
+}
 
 /* DISEÑO RESPONSIVO (Móviles y Tablets)*/
 @media (max-width: 768px) {
@@ -457,6 +472,9 @@ footer {
         margin-right: 1px;
         margin-bottom: auto;
         text-align: left;
+    }
+    .servicios-grid {
+        display: block;
     }
 }
 

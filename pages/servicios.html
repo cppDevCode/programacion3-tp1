@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Servicios | TechNova Games</title>
         <link rel="stylesheet" href="../css/style.css" />
+        <script src="../js/servicios.js" defer></script>
     </head>
     <body>
         <header>
@@ -19,63 +20,17 @@
             </nav>
         </header>
         <main>
+            <form id="formulario-busqueda">
+                <label for="buscar">Buscar</label>
+                <input type="text" name="buscar" placeholder="Ice Climber">
+                <button id="buscar">Buscar</button>
+            </form>
             <section class="hero-servicios">
-                <h2>Todo lo que podés hacer en nuestra plataforma</h2>
-                <p>Descubrí, comprá y disfrutá tus juegos favoritos desde un solo lugar.</p>
+                <h2>Descubrí, comprá y disfrutá tus juegos favoritos desde un solo lugar</h2>
             </section>
 
-            <section class="servicios-grid">
-                <article class="servicio-card">
-                    <h3>Compra de Juegos</h3>
-                    <p>
-                        Accedé a un amplio catálogo de juegos de distintos géneros y compralos de
-                        forma rápida y segura.
-                    </p>
-                </article>
-
-                <article class="servicio-card">
-                    <h3>Recomendaciones Personalizadas</h3>
-                    <p>
-                        Nuestro sistema te sugiere juegos según tus gustos, tus géneros favoritos y
-                        los títulos que ya jugaste.
-                    </p>
-                </article>
-
-                <article class="servicio-card">
-                    <h3>Biblioteca Digital</h3>
-                    <p>
-                        Todos tus juegos quedan guardados en tu cuenta para que puedas descargarlos
-                        y jugarlos cuando quieras.
-                    </p>
-                </article>
-
-                <article class="servicio-card">
-                    <h3>Ofertas y Descuentos</h3>
-                    <p>
-                        Encontrá promociones especiales, rebajas de temporada y juegos gratuitos por
-                        tiempo limitado.
-                    </p>
-                </article>
-
-                <article class="servicio-card">
-                    <h3>Modo Multijugador</h3>
-                    <p>
-                        Jugá online con tus amigos, armá equipos y participá en partidas
-                        multijugador.
-                    </p>
-                </article>
-
-                <article class="servicio-card">
-                    <h3>Reseñas y Valoraciones</h3>
-                    <p>Leé opiniones de otros usuarios y calificá los juegos que ya probaste.</p>
-                </article>
-            </section>
-
-            <section class="cta-servicios">
-                <h2>¿Listo para empezar?</h2>
-                <p>Creá tu cuenta y encontrá tu próximo juego favorito.</p>
-                <a href="registro.html" class="boton">Registrarse</a>
-            </section>
+            <section class="servicios-grid" id="serv-grid">         
+            </section>            
         </main>
 
         <footer>
