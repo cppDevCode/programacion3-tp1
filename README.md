@@ -17,6 +17,7 @@ https://cppdevcode.github.io/programacion3-tp1/
 ## Organización
 **Alejandro Lucas Baldres**
 * Refactorizacion HTML Servicios para que contenga las cards de los juegos
+* Agregado de integracion para busqueda de servicios
 * servicios.js
 
 ## Documentacion Tecnica
