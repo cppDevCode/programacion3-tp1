@@ -414,6 +414,11 @@ footer {
     margin: var(--space-m);
 }
 
+#formulario-busqueda {
+    float: right;
+    margin-right: 15px;
+}
+
 /* DISEÑO RESPONSIVO (Móviles y Tablets)*/
 @media (max-width: 768px) {
     .tituloIdx {
