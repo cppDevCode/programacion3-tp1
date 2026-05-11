@@ -33,7 +33,7 @@ async function abrirModal(id) {
     const respuesta = await fetch(`http://127.0.0.1:5000/servicios/${id}`);
     const servicio = await respuesta.json();
     if (!servicio || respuesta.status === 404) {
-      modalBody.innerHTML = '<p>No se encontró el servicio.</p>';
+      modalBody.innerHTML = '<p> No se encontró el servicio. </p>';
       return;
     }
 
