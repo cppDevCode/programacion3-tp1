@@ -2,7 +2,6 @@ const seccionEquipo = document.querySelector("section.equipo");
 
 document.addEventListener("DOMContentLoaded", async function () {
   const equipo = await obtenerEquipo();
-  console.log(equipo);
   await renderizarEquipo(equipo);
 });
 
@@ -22,7 +21,7 @@ async function renderizarEquipo(equipo) {
         <div class="miembro_equipo" id="miembro-${integrante.id}">
           <h2>${integrante.nombre} ${integrante.apellido}</h2>
           <p>${integrante.rol}</p>
-          <img src="../assets/img/team_member_1.jpg" alt="Foto de ${integrante.nombre} ${integrante.apellido}" />
+          <img src="../assets/img/${integrante.imagen}" alt="Foto de ${integrante.nombre} ${integrante.apellido}" />
 
           <details>
             <summary>Conocé más sobre ${integrante.nombre}</summary>
