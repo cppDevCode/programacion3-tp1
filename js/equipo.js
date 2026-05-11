@@ -1,22 +1,26 @@
 const seccionEquipo = document.querySelector("section.equipo");
 
 document.addEventListener("DOMContentLoaded", async function () {
-  const equipo = await obtenerEquipo();
-  await renderizarEquipo(equipo);
+  const data = await obtenerEquipo();
+  await renderizarEquipo(data);
 });
 
 async function obtenerEquipo() {
   try {
     const data = await fetch("http://localhost:3000/equipo");
     const dataJson = await data.json();
-    return dataJson.equipo;
+    return dataJson;
   } catch (error) {
     console.error("Sucedio un error al traer el equipo: ", error);
   }
 }
 
-async function renderizarEquipo(equipo) {
-  equipo.forEach((integrante) => {
+async function renderizarEquipo(data) {
+  if (data.mensaje) {
+    seccionEquipo.innerHTML = `<p>${data.mensaje}. Recargue la pagina</p>`;
+    return;
+  }
+  data.equipo.forEach((integrante) => {
     seccionEquipo.innerHTML += `
         <div class="miembro_equipo" id="miembro-${integrante.id}">
           <h2>${integrante.nombre} ${integrante.apellido}</h2>
