@@ -602,3 +602,56 @@ summary {
   }
 }
 /* fin css equipo */
+/** LOGIN **/
+/* boton login */
+.botonLogin {
+    margin-left: auto;
+    background-color: var(--color-accent);
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.botonLogin:hover {
+    color: var(--color-text);
+    opacity: 0.8;
+}
+
+/* login*/
+.form-container {
+    background-color: var(--color-secondary);
+    width: 350px;
+    margin: 50px auto;
+    padding: var(--space-l);
+    border-radius: 10px;
+}
+
+.form-group {
+    margin-bottom: var(--space-m);
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    gap: var(--space-s);
+}
+
+.input-field {
+    width: 100%;
+    padding: var(--space-s);
+    border: none;
+    border-radius: 5px;
+}
+
+.btn-ok {
+    width: 100%;
+    padding: var(--space-s);
+    background-color: var(--color-accent);
+    color: var(--color-text);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-ok:hover {
+    opacity: 0.8;
+}
