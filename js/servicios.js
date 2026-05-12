@@ -1,5 +1,66 @@
 let serviciosGrid = document.getElementById('serv-grid');
 
+//creo el MODAL
+const modal = document.createElement('div'); //crea un div
+modal.id = 'modal-detalle'; //lo identifica para poder identificarlo en el css y en js
+modal.innerHTML = `
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal-contenido">
+      <button class="modal-cerrar" id="modal-cerrar">✕</button>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+`;
+document.body.appendChild(modal); // agrega este modal al body
+ // class=modal-overlay, modal-contenido, modal-cerrar.... clases que modifico estilo en css
+
+//Cierro el modal 
+document.getElementById('modal-cerrar').addEventListener('click', cerrarModal); //es el boton modal-cerrar
+document.getElementById('modal-overlay').addEventListener('click', function(e) {
+  if (e.target === this) cerrarModal();
+});
+
+function cerrarModal() {
+  document.getElementById('modal-overlay').style.display = 'none'; //oculta el modal con display=none
+}
+
+document.addEventListener('click', function(e) {
+  if (e.target.closest('.JuegoMasVendidoS')) {
+    console.log('Hiciste click en el servicio con id: ' + e.target.closest('.JuegoMasVendidoS').id);
+    abrirModal(e.target.closest('.JuegoMasVendidoS').id);
+  }
+});
+
+async function abrirModal(id) {
+    id = parseInt(id);
+  const modalBody = document.getElementById('modal-body');
+  const overlay = document.getElementById('modal-overlay');
+  modalBody.innerHTML = '<p>Cargando...</p>'; 
+  overlay.style.display = 'flex';
+  try {
+    const respuesta = await fetch(`http://127.0.0.1:5000/servicios/id/${id}`);
+    const servicio = await respuesta.json();
+    if (!servicio || respuesta.status === 404) {
+      modalBody.innerHTML = '<p> No se encontró el servicio. </p>';
+      return;
+    }
+    let estrellas = '';
+    for (let i = 0; i < servicio.puntaje; i++) estrellas += '★';
+    modalBody.innerHTML = `
+      <img src="../assets/img/${servicio.imagen}" alt="${servicio.nombre}" class="modal-imagen">
+      <h2>${servicio.nombre}</h2>
+      <p class="modal-estrellas">${estrellas}</p>
+      <p>${servicio.descripcion}</p>
+      <p><strong>Precio:</strong> $${servicio.precio}</p>
+      <p><strong>Stock:</strong> ${servicio.stock > 0 ? servicio.stock + ' disponibles' : 'Sin stock'}</p>
+      <a href="../pages/pedido.html" class="modal-btn">Comprar</a>
+    `;
+  } catch (error) {
+    modalBody.innerHTML = `<p>Error al cargar el detalle: ${error}</p>`;
+  }
+}
+
+
 document.addEventListener("DOMContentLoaded", async function() {
     if ( !serviciosGrid ) {
         serviciosGrid.innerHTML='<img src="../assets/img/cargando.gif">';
@@ -43,7 +104,6 @@ try {
     }
 });
 
-
 function agregoCards (servicios) {
     serviciosGrid.innerHTML = '';
     servicios.forEach((serv) => {
@@ -62,17 +122,16 @@ function agregoCards (servicios) {
         articulo.className = 'JuegoMasVendidoIdx JuegoMasVendidoS';
         articulo.id = serv.id;
         articulo.innerHTML = `
-            <a href="../pages/pedido.html">                    
+            <a>                    
                 <picture class="caratulaIdx">                        
                     <img src="../assets/img/${serv.imagen}">
                 </picture>                    
                 <p>${serv.nombre}</p>
                 <p class="estrellasIdx">${estrellas}</p>
                 <p class="topDescripcionIdx">${serv.descripcion}</p>
-                
-                
             </a>
         `;
         serviciosGrid.appendChild(articulo);
     });
 }
+
