@@ -24,19 +24,26 @@ function cerrarModal() {
   document.getElementById('modal-overlay').style.display = 'none'; //oculta el modal con display=none
 }
 
+document.addEventListener('click', function(e) {
+  if (e.target.closest('.JuegoMasVendidoS')) {
+    console.log('Hiciste click en el servicio con id: ' + e.target.closest('.JuegoMasVendidoS').id);
+    abrirModal(e.target.closest('.JuegoMasVendidoS').id);
+  }
+});
+
 async function abrirModal(id) {
+    id = parseInt(id);
   const modalBody = document.getElementById('modal-body');
   const overlay = document.getElementById('modal-overlay');
   modalBody.innerHTML = '<p>Cargando...</p>'; 
   overlay.style.display = 'flex';
   try {
-    const respuesta = await fetch(`http://127.0.0.1:5000/servicios/${id}`);
+    const respuesta = await fetch(`http://127.0.0.1:5000/servicios/id/${id}`);
     const servicio = await respuesta.json();
     if (!servicio || respuesta.status === 404) {
       modalBody.innerHTML = '<p> No se encontró el servicio. </p>';
       return;
     }
-
     let estrellas = '';
     for (let i = 0; i < servicio.puntaje; i++) estrellas += '★';
     modalBody.innerHTML = `
@@ -115,15 +122,13 @@ function agregoCards (servicios) {
         articulo.className = 'JuegoMasVendidoIdx JuegoMasVendidoS';
         articulo.id = serv.id;
         articulo.innerHTML = `
-            <a href="../pages/pedido.html">                    
+            <a>                    
                 <picture class="caratulaIdx">                        
                     <img src="../assets/img/${serv.imagen}">
                 </picture>                    
                 <p>${serv.nombre}</p>
                 <p class="estrellasIdx">${estrellas}</p>
                 <p class="topDescripcionIdx">${serv.descripcion}</p>
-                
-                
             </a>
         `;
         serviciosGrid.appendChild(articulo);

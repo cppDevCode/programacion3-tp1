@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
 async function obtenerEquipo() {
   try {
-    const data = await fetch("http://localhost:3000/equipo");
+    const data = await fetch("http://localhost:5000/equipo");
     const dataJson = await data.json();
     return dataJson;
   } catch (error) {
