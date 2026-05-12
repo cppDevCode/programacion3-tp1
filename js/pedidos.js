@@ -1,13 +1,13 @@
 const selectProducto=document.querySelector ('#producto')
-const formPedido= document.querySelector ('#form-pedido')
-const resultadoPedido=document.querySelector ('#resultado-pedido')
+const formPedido= document.querySelector ('#formPedido')
+const resultadoPedido=document.querySelector ('#resultadoPedido')
 
 //Función cargar servicios
 
 async function cargarServicios(){
     try{
-        const reponse= await fetch ('http://localhost:3000/productos')
-        const data= await reponse.json()
+        const response= await fetch ('http://localhost:3000/servicios')
+        const data= await response.json()
 
         selectProducto.innerHTML= '<option value="">Seleccione un producto</option>'
         data.forEach ((servicio) => {
@@ -20,10 +20,11 @@ async function cargarServicios(){
                 option.textContent= `${servicio.nombre} - SIN STOCK`
                 option.disabled= true
             }
-            selectProducto.append (option)
+            selectProducto.appendChild (option)
         })
     } catch (error) {
         console.error('Error al cargar los servicios:', error)
+        resultadoPedido.style.display = 'block'
         resultadoPedido.textContent= 'Error al cargar los productos. Por favor, inténtelo de nuevo más tarde.'
     }
 }
@@ -40,14 +41,42 @@ async function enviarPedido(evento) {
     const calle = document.querySelector('#calle').value
     const numero = document.querySelector('#numero').value
     const ciudad = document.querySelector('#ciudad').value
-    const CP = document.querySelector('#CP').value
+    const cp = document.querySelector('#CP').value
     const opciones_de_pago = document.querySelector('#opciones_de_pago').value
     const numero_tarjeta = document.querySelector('#numero_tarjeta').value
     const vencimiento = document.querySelector('#vencimiento').value
     const cvv = document.querySelector('#cvv').value
-
-    if (!producto || !nombre || !apellido || !email || !calle || !numero || !ciudad || !CP || !opciones_de_pago) {
+//validaciones
+    if (!producto || !nombre || !apellido || !email || !calle || !numero || !ciudad || !cp || !opciones_de_pago) {
+        resultadoPedido.style.display = 'block'
         resultadoPedido.textContent= 'Por favor, complete todos los campos obligatorios.'
+        return
+    }
+    const metodosValidos = ['credito', 'debito']
+    if (!metodosValidos.includes(opciones_de_pago)) {
+        resultadoPedido.style.display = 'block'
+        resultadoPedido.textContent = 'Método de pago inválido'
+        return 
+    } 
+    if (isNaN(numero_tarjeta) || numero_tarjeta.length < 16) {
+        resultadoPedido.style.display = 'block'
+        resultadoPedido.textContent = 'Número de tarjeta inválido'
+        return
+
+    }
+    if (isNaN(numero)) {
+        resultadoPedido.style.display = 'block'
+        resultadoPedido.textContent = 'El número de dirección debe ser numérico'
+        return
+    } 
+    if (isNaN(cp)) {
+        resultadoPedido.style.display = 'block'
+        resultadoPedido.textContent = 'El código postal debe ser numérico'
+        return
+    }
+    if (!email.includes('@') || !email.includes('.')) {
+        resultadoPedido.style.display = 'block'
+        resultadoPedido.textContent = 'Email inválido'
         return
     }
 
@@ -63,7 +92,7 @@ async function enviarPedido(evento) {
                 calle,
                 numero,
                 ciudad,
-                CP,
+                CP:cp,
                 opciones_de_pago,
                 numero_tarjeta,
                 vencimiento,
@@ -76,19 +105,22 @@ async function enviarPedido(evento) {
         console.log(data)
         
         if (response.ok) {
+            resultadoPedido.style.display = 'block'
             resultadoPedido.innerHTML=`
             <strong> ${data.mensaje}</strong><br>
             Producto: ${data.detalle.producto}<br>
             Precio: $${data.detalle.precioUnitario}<br>
-            Cliente: ${data.detalle.nombre} ${data.pedido.apellido}<br>
-            Dirección: ${data.detalle.calle} ${data.detalle.numero}, ${data.detalle.ciudad}, CP: ${data.detalle.CP}<br>
+            Cliente: ${data.detalle.nombre}<br>
+            Dirección: ${data.detalle.direccion}<br>
             `
         } else {
+            resultadoPedido.style.display = 'block'
             resultadoPedido.textContent= `${data.error}`
         }
 
     } catch (error) {
         console.error('Error al enviar el pedido:', error)
+        resultadoPedido.style.display = 'block'
         resultadoPedido.textContent= 'Error al enviar el pedido. Por favor, inténtelo de nuevo más tarde.'
     }
 }
