@@ -1,6 +1,7 @@
 const seccionEquipo = document.querySelector("section.equipo");
 
 document.addEventListener("DOMContentLoaded", async function () {
+  renderizarSpinner();
   const data = await obtenerEquipo();
   await renderizarEquipo(data);
 });
@@ -12,10 +13,13 @@ async function obtenerEquipo() {
     return dataJson;
   } catch (error) {
     console.error("Sucedio un error al traer el equipo: ", error);
+    return { mensaje: "Error interno del servidor" };
   }
 }
 
 async function renderizarEquipo(data) {
+  seccionEquipo.innerHTML = "";
+
   if (data.mensaje) {
     seccionEquipo.innerHTML = `<p>${data.mensaje}. Recargue la pagina</p>`;
     return;
@@ -35,4 +39,8 @@ async function renderizarEquipo(data) {
           </details>
         </div>`;
   });
+}
+
+function renderizarSpinner() {
+  seccionEquipo.innerHTML = '<img src="../assets/img/cargando.gif">';
 }
