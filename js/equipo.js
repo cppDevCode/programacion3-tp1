@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
 async function obtenerEquipo() {
   try {
-    const data = await fetch("http://localhost:5000/equipo");
+    const data = await fetch("https://tp3-api-express-grupo6.onrender.com/equipo");
     const dataJson = await data.json();
     return dataJson;
   } catch (error) {
