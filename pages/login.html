@@ -1,0 +1,61 @@
+
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Login</title>
+        <link rel="shortcut icon" href="../assets/favicon/favicon.png" type="image/x-icon" />
+        <link rel="stylesheet" href="../css/style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    </head>
+
+
+    <body>
+        <header>
+            <img src="../assets/img/logo.png" alt="Logo TecnoGames" class="logo" />
+            <nav>
+                <a href="../index.html">Home</a>
+                <a href="../pages/servicios.html">Servicios</a>
+                <a href="../pages/equipo.html">Equipo</a>
+                <a href="../pages/pedido.html">Realizar pedido</a>
+                <a href="../pages/contacto.html">Contacto</a>
+                <a href="../pages/faq.html">Preguntas Frecuentes</a>
+            </nav>
+        </header>
+        <main >
+        <form id="loginForm" class="form-container" >
+            <fieldset>
+            <legend>Bienvenido</legend>
+            <h2>Acceso Clientes</h2>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <div class="input-container">
+                <i class="fa fa-envelope-o"></i>
+                <input class="input-field" type="email" id="email" placeholder="E-mail" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="password">Contraseña</label>
+                <div class="input-container">
+                <i class="fa fa-key" aria-hidden="true"></i>
+                <input id="password" class="input-field" type="password" required placeholder="Contraseña"/>
+                </div>
+            </div>
+
+            
+            <button class="btn-ok" type="submit">Ingresar</button>
+           
+        </form>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 TecnoGames. Todos los derechos reservados.</p>
+        </footer>  
+
+    <script src="../js/login.js"></script>
+    </body>
+    </html>
