@@ -33,12 +33,11 @@ function renderizarPerfil(data) {
     return;
   }
 
-  const pedidosHTML = data.ultimosPedidos && data.ultimosPedidos.length > 0
-    ? data.ultimosPedidos.map(pedido => `
+  const pedidosHTML = data.ultimos_pedidos && data.ultimos_pedidos.length > 0
+    ? data.ultimos_pedidos.map(pedido => `
         <div class="pedido-item">
-          <p><strong>${pedido.servicio}</strong></p>
+          <p><strong>${pedido.nombre_servicio}</strong></p>
           <p>Fecha: ${pedido.fecha}</p>
-          <p>Total: $${pedido.total}</p>
         </div>
       `).join("")
     : "<p>No hay pedidos recientes</p>";
@@ -48,7 +47,7 @@ function renderizarPerfil(data) {
       <img src="../assets/img/${data.foto}" alt="Foto de ${data.nombre}" class="perfil-foto" />
       <h2>${data.nombre}</h2>
       <p>${data.mail}</p>
-      <p>Miembro desde: ${data.fechaRegistro}</p>
+      <p>Miembro desde: ${data.fecha_registro}</p>
     </div>
     <div class="perfil-pedidos">
       <h3>Últimos pedidos</h3>

@@ -34,7 +34,7 @@ form.addEventListener("submit", async (e) => {
     alert(data.message);
 
     //voy al perfil del usuario
-    window.location.href = "../perfil.html";
+    window.location.href = "../pages/perfil.html";
   } catch (error) {
     console.error("Error:", error);
     alert("Error al iniciar sesión");
